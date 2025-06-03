@@ -22,7 +22,7 @@ const contactInfo = [
 
 function ContactForm() {
   return (
-    <section className="px-4 sm:px-8 md:px-16 lg:px-20 my-12 bg-white">
+    <section className="px-4 sm:px-8 md:px-16 lg:px-20 mt-12 bg-white">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-semibold text-black uppercase">Contact Us</h2>
         <p className="text-gray-500 mt-1">Look at the latest collection that we offer</p>
