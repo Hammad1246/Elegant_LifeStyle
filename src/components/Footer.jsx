@@ -50,13 +50,13 @@ function Footer() {
               </h4>
               <ul className="space-y-5 text-sm text-[#606060]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/about" className="hover:underline">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
-                    Catalogue
+                  <a href="/gallery" className="hover:underline">
+                    Gallery
                   </a>
                 </li>
                 <li>
