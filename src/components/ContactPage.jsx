@@ -19,12 +19,16 @@ function ContactPage() {
   return (
     <section className="min-h-screen px-4 sm:px-6 py-6 bg-white flex items-center mt-12">
       <div className="w-full max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-[#332518] mb-8 text-center">
-          Request a Quote
-        </h1>
+        <div className="text-center pb-5">
+          <h1 className="text-4xl font-bold text-[#332518] text-center">
+            Request a Quote
+          </h1>
+          <p className="text-gray-500 mt-1">
+          Fill out the form below to get a customized quote for your needs.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-       
           <div className="flex flex-col min-h-[400px] bg-gray-50 rounded-lg overflow-hidden">
             {selectedFurniture && (
               <div className="relative group h-full flex items-center justify-center p-4">
