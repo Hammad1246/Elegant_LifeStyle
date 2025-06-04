@@ -16,22 +16,22 @@ const furnitureData = [
     image: "/images/furnitureCard.png",
   },
   {
-    title: "Stockholm",
+    title: "Sofa",
     price: 49,
     oldPrice: 79,
-    image: "/images/furnitureCard.png",
+    image: "/images/f5.png",
   },
   {
-    title: "Stockholm",
+    title: "Dining",
     price: 49,
     oldPrice: 79,
-    image: "/images/furnitureCard.png",
+    image: "/images/f2.png",
   },
   {
-    title: "Stockholm",
+    title: "Dining",
     price: 49,
     oldPrice: 79,
-    image: "/images/furnitureCard.png",
+    image: "/images/f4.png",
   },
   {
     title: "Stockholm",
