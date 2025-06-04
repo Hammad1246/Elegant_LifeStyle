@@ -49,6 +49,9 @@ function CollectionSection() {
                 height: "45px",
                 borderRadius: "0px",
                 border: "1px solid gray",
+                "&:hover": {
+                  backgroundColor: "#332518",
+                },
               }}
               variant="contained"
             >

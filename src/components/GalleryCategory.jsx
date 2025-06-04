@@ -56,7 +56,7 @@ const GalleryCategory = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`relative px-6 py-2 text-black group ${
+              className={`relative px-6 py-2 text-black group cursor-pointer ${
                 selectedCategory === category
                   ? "border-b-2 border-black font-bold"
                   : ""
@@ -108,7 +108,7 @@ const GalleryCategory = () => {
 
         {/* Button */}
         <button 
-          className="bg-[#1D1D1D] hover:bg-[#333333] text-white text-sm px-4 py-3 border border-gray-500 rounded-none flex items-center gap-2"
+          className="bg-[#1D1D1D] hover:bg-[#333333] text-white text-sm px-4 py-3 border border-gray-500 rounded-none flex items-center gap-2 cursor-pointer"
           aria-label="Explore more categories"
         >
           Explore More <GoArrowUpRight />

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Mousewheel } from "swiper/modules";
 
 const furnitureData = [
   {
@@ -54,6 +55,10 @@ function NewArrivals() {
 
       <div className="w-full mx-auto">
         <Swiper
+          modules={[Mousewheel]}
+          mousewheel={{
+            forceToAxis: true,
+          }}
           spaceBetween={20}
           slidesPerView={1.2}
           breakpoints={{

@@ -38,7 +38,7 @@ function HeroBanner({ bannerName }) {
       <div className="relative flex justify-center items-center h-full">
         <div className="flex w-full h-auto justify-between items-center px-7">
           <button
-            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center"
+            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
             onClick={handlePrevSlide}
             aria-label="Previous slide"
           >
@@ -48,7 +48,7 @@ function HeroBanner({ bannerName }) {
           <h1 className="text-white text-6xl">{bannerName}</h1>
           
           <button
-            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center"
+            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
             onClick={handleNextSlide}
             aria-label="Next slide"
           >

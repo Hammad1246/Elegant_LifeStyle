@@ -16,6 +16,9 @@ const BUTTON_STYLES = {
   height: "48px",
   borderRadius: "0px",
   border: "1px solid gray",
+  "&:hover": {
+    backgroundColor: "#707070"
+  },
 };
 
 function Hero() {
@@ -65,6 +68,7 @@ function Hero() {
             sx={BUTTON_STYLES}
             variant="contained"
             aria-label="Shop now"
+            
           >
             <span className="flex gap-1 items-center text-sm">
               SHOP NOW <GoArrowUpRight className='text-lg'/>

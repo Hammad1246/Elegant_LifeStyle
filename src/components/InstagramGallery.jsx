@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Mousewheel } from "swiper/modules";
 
 const images = [
   "/images/f1.png",
@@ -23,6 +24,10 @@ function InstagramGallery() {
 
       <div>
         <Swiper
+         modules={[Mousewheel]}
+                  mousewheel={{
+                    forceToAxis: true,
+                  }}
           spaceBetween={16}
           slidesPerView={2.2}
           grabCursor={true}

@@ -96,7 +96,7 @@ export default function Navbar() {
                 <img
                   alt="Company Logo"
                   src="/images/brandLogo.png"
-                  className="h-auto w-auto"
+                  className="h-[40px] w-[150px]"
                   width={100}
                   height={40}
                 />
