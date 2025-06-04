@@ -64,6 +64,7 @@ function ContactForm() {
           <button
             type="submit"
             className="w-full bg-gradient-to-br from-[#504132] to-[#332518] text-white py-3 rounded-md text-sm tracking-wide uppercase cursor-pointer transition"
+            onClick={(e)=> e.preventDefault()}
           >
             Submit
           </button>

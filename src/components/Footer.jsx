@@ -11,9 +11,9 @@ function Footer() {
           {/* Left Column */}
           <div className=" w-[40%] space-y-7">
             <img
-              src="/images/brandLogoFooter.png"
+              src="/images/footerLogo.png"
               alt="Elegant Lifestyle"
-              className="w-auto h-auto mb-6"
+              className="w-[247px] h-[64px] mb-6"
             />
             <p className="text-sm text-[#606060]">
               The advantage of hiring a workspace with us is that it gives you
@@ -65,7 +65,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/contact" className="hover:underline">
                     Contact
                   </a>
                 </li>

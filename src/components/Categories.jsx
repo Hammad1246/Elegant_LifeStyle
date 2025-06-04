@@ -2,6 +2,7 @@
 import Button from "@mui/material/Button";
 import { GoArrowUpRight } from "react-icons/go";
 import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
 
 const categories = [
   {
@@ -36,7 +37,10 @@ function Categories() {
       {/* Header */}
       <div className="flex justify-between items-center py-6 px-5">
         <h1 className="text-black text-4xl ">Top Categories</h1>
-        <Button
+        <Link
+        href={"/gallery"}
+        >
+         <Button
           sx={{
             backgroundColor: "#1D1D1D",
             width: "auto",
@@ -53,6 +57,8 @@ function Categories() {
             Explore Gallery <GoArrowUpRight />
           </p>
         </Button>
+        </Link>
+       
       </div>
 
       {/* Content */}

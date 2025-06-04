@@ -58,6 +58,7 @@ function Testimonials() {
             768: { slidesPerView: 2.2 },
             1024: { slidesPerView: 3 },
           }}
+          
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
@@ -65,6 +66,7 @@ function Testimonials() {
                 name={testimonial.author}
                 text={testimonial.text}
                 active={index === activeTestimonial}
+                
               />
             </SwiperSlide>
           ))}

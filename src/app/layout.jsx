@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Cardo, Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { FurnitureProvider } from "./context/FurnitureContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,18 +26,18 @@ const jost = Jost({
   weight: ["300", "400", "700"], // Specify weights for Jost
 });
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-         className={`${geistSans.variable} ${geistMono.variable} ${cardo.variable} ${jost.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cardo.variable} ${jost.variable} antialiased`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <FurnitureProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </FurnitureProvider>
       </body>
     </html>
   );
 }
-

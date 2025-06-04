@@ -1,8 +1,11 @@
-"use client"
+"use client";
 import React, { useState, useMemo } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { Box } from "@mui/material";
 import InstagramGallery from "./InstagramGallery";
+import Link from "next/link";
+import { useFurniture } from "@/app/context/FurnitureContext";
+import { useRouter } from "next/navigation";
 
 const CATEGORIES = [
   { id: 1, category: "Beds", image: "/images/c1.png" },
@@ -22,7 +25,13 @@ const CATEGORIES = [
   { id: 15, category: "Beds", image: "/images/c15.png" },
 ];
 
-const FILTER_OPTIONS = ["All", "Sofas", "Coffee Tables", "Beds", "Dining Tables"];
+const FILTER_OPTIONS = [
+  "All",
+  "Sofas",
+  "Coffee Tables",
+  "Beds",
+  "Dining Tables",
+];
 
 const GRID_STYLES = {
   display: "grid",
@@ -33,6 +42,7 @@ const GRID_STYLES = {
 };
 
 const GalleryCategory = () => {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredCategories = useMemo(() => {
@@ -41,10 +51,23 @@ const GalleryCategory = () => {
       : CATEGORIES.filter((item) => item.category === selectedCategory);
   }, [selectedCategory]);
 
+  const { setSelectedFurniture } = useFurniture();
+
+  const handleQuoteClick = (item) => {
+    const title = item.category;
+    const image = item.image;
+    console.log(title, image);
+
+    setSelectedFurniture({ title, image });
+    router.replace("/product");
+  };
+
   return (
     <>
       <div className="min-h-screen flex flex-col justify-evenly items-center py-12">
-        <h1 className="text-4xl text-[#191D1F] font-bold mb-4">Top Categories</h1>
+        <h1 className="text-4xl text-[#191D1F] font-bold mb-4">
+          Top Categories
+        </h1>
         <p className="text-center text-[#868686] mb-12 ">
           Lorem ipsum is simply dummy text of the printing and typesetting
           industry. Lorem ipsum has been the industry's
@@ -95,10 +118,12 @@ const GalleryCategory = () => {
                   <img
                     src={category.image}
                     alt={`${category.category} example`}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-cover cursor-pointer"
                     loading="lazy"
                     width={span === 3 ? 400 : 250}
                     height={256}
+                    onClick={() => handleQuoteClick(category)}
+                    aria-label={`Select ${category.category}`}
                   />
                 </Box>
               );
@@ -107,7 +132,7 @@ const GalleryCategory = () => {
         </div>
 
         {/* Button */}
-        <button 
+        <button
           className="bg-[#1D1D1D] hover:bg-[#333333] text-white text-sm px-4 py-3 border border-gray-500 rounded-none flex items-center gap-2 cursor-pointer"
           aria-label="Explore more categories"
         >
