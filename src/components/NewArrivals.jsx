@@ -43,12 +43,12 @@ const furnitureData = [
 
 function NewArrivals() {
   return (
-    <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center my-16 gamp-8 md:gap-12">
-      <div className="text-center space-y-2">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#17161B]">
+    <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center md:my-16 my-8 gap-7  md:gap-12">
+      <div className="text-center space-y-2 w-[80%]">
+        <h1 className="text-xl sm:text-3xl lg:text-4xl text-[#17161B]">
           Fresh Finds for Your Living Space
         </h1>
-        <p className="text-[#606060] text-sm sm:text-base">
+        <p className="text-[#606060]  text-xs md:text-sm sm:text-base ">
          Explore our latest collection of stylish, cozy sofas just arrived and ready to redefine your comfort.
         </p>
       </div>
@@ -80,7 +80,7 @@ function NewArrivals() {
           sx={{
             backgroundColor: "#1D1D1D",
             width: "auto",
-            height: "45px",
+           height: { xs: "40px", md: "48px" },
             borderRadius: "0px",
             border: "1px solid gray",
             "&:hover": {
@@ -89,7 +89,7 @@ function NewArrivals() {
           }}
           variant="contained"
         >
-          <p className="flex gap-2 items-center text-sm px-4">
+          <p className="flex gap-2 items-center text-xs md:text-sm px-4">
             VIEW ALL <GoArrowUpRight />
           </p>
         </Button>

@@ -14,7 +14,7 @@ const SLIDES = [
 const BUTTON_STYLES = {
   backgroundColor: "#606060",
   width: "auto",
-  height: "48px",
+   height: { xs: "40px", md: "48px" },
   borderRadius: "0px",
   border: "1px solid gray",
   "&:hover": {
@@ -56,7 +56,7 @@ function Hero() {
       </div> */}
 
       {/* Content Section */}
-      <div className="w-auto h-[160px] absolute md:bottom-12 md:left-16 bottom-8 left-4 flex justify-between flex-col text-white">
+      <div className="w-auto h-[130px] md:h-[160px] absolute md:bottom-12 md:left-16 bottom-20 left-4 flex justify-between flex-col text-white">
         <div className="w-full h-auto flex flex-col gap-1.5">
           <h1 className="md:text-6xl text-2xl">Comfort Crafted to Perfection</h1>
           <p className="md:text-sm text-xs">
@@ -70,8 +70,8 @@ function Hero() {
             aria-label="Shop now"
             
           >
-            <span className="flex gap-1 items-center text-sm">
-              SHOP NOW <GoArrowUpRight className='text-lg'/>
+            <span className="flex gap-1 items-center md:text-sm text-xs">
+              SHOP NOW <GoArrowUpRight className='md:text-lg text-xs'/>
             </span>
              
           </Button>
@@ -79,11 +79,11 @@ function Hero() {
       </div>
 
       {/* Slide Indicators */}
-      <div className="h-auto w-[10%] absolute bottom-8 left-[45%] flex justify-between items-center">
+     <div className="h-auto md:w-[10%] w-[30%] absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-between items-center">
         {SLIDES.map((slide, index) => (
           <button
             key={slide.id}
-            className={`border-[1.7px] w-6 cursor-pointer ${
+            className={`border-[1.7px] md:w-6 w-6 cursor-pointer ${
               activeIndex === index
                 ? "border-[#FFF]"
                 : "border-[#FFFFFF80] opacity-50"

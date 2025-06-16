@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <Disclosure as="nav" className="absolute w-screen bg-transparent z-10" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}>
-        <div className="mx-auto w-[80%]">
+        <div className="mx-auto w-[90%] md:w-[80%]">
           <div className="relative flex h-[68px] items-center justify-between">
             {/* Mobile menu button */}
             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -138,8 +138,8 @@ export default function Navbar() {
                 href={item.href}
                 className={classNames(
                   item.current
-                    ? "bg-gray-900 text-white"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    ? "bg-[#332518] text-white"
+                    : "text-gray-300 hover:text-white",
                   "block rounded-md px-3 py-2 text-base font-medium"
                 )}
               >

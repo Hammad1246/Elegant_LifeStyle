@@ -13,14 +13,14 @@ export default function page() {
   return (
     <main className="w-screen h-auto ">
       <Hero />
-      {/* <NewArrivals/>
+      <NewArrivals/>
       <CollectionSection/>
       <WhyChooseUs/>
       <Categories/>
       <Testimonials/>
       <ShowRoom/>
       <InstagramGallery/>
-      <ContactForm/> */}
+      <ContactForm/>
     </main>
   );
 }
