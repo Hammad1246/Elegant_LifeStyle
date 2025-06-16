@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useMemo } from "react";
+import Image from "next/image";
 
 const IMAGES = [
   { id: 1, image: "/images/c1.png", alt: "About us image 1" },
@@ -18,16 +19,19 @@ const GRID_STYLES = {
 };
 
 function AboutUs() {
-  const imageGrid = useMemo(() => [
-    // First row - 2 images side by side
-    { image: IMAGES[3], colSpan: 1 },
-    { image: IMAGES[4], colSpan: 1 },
-    // Second row - 1 full width image
-    { image: IMAGES[2], colSpan: 2 },
-    // Third row - 2 images side by side
-    { image: IMAGES[3], colSpan: 1 },
-    { image: IMAGES[4], colSpan: 1 },
-  ], []);
+  const imageGrid = useMemo(
+    () => [
+      // First row - 2 images side by side
+      { image: IMAGES[3], colSpan: 1 },
+      { image: IMAGES[4], colSpan: 1 },
+      // Second row - 1 full width image
+      { image: IMAGES[2], colSpan: 2 },
+      // Third row - 2 images side by side
+      { image: IMAGES[3], colSpan: 1 },
+      { image: IMAGES[4], colSpan: 1 },
+    ],
+    []
+  );
 
   return (
     <div className="h-screen px-10 flex justify-center items-center">
@@ -71,9 +75,9 @@ function AboutUs() {
                 sx={{ gridColumn: `span ${item.colSpan}` }}
                 className="rounded-lg overflow-hidden shadow-lg h-full w-full"
               >
-                <img
-                  src={item.image.image}
-                  alt={item.image.alt}
+                <Image
+                  src={item.image.image} 
+                  alt={item.image.alt || "Image description"}
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={item.colSpan === 2 ? 800 : 400}

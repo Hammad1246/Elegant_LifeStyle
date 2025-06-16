@@ -2,6 +2,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import Button from "@mui/material/Button";
 import { GoArrowUpRight } from "react-icons/go";
+import Image from 'next/image'
 
 const SLIDES = [
   { id: 0, image: "/images/heroImage.jpg" },
@@ -44,7 +45,7 @@ function Hero() {
 
       {/* Brand Logo */}
       <div className="relative inset-0 flex items-start top-10 justify-center">
-        <img
+        <Image
           src="/images/brandName.png"
           alt="Brand logo"
           className="w-80 h-80 object-contain"

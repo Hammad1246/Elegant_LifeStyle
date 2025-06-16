@@ -10,6 +10,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaTruckArrowRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import Link from 'next/link';
+import Image from 'next/image'
 
 const shippingMessages = [
   "Free shipping on orders of $49+",
@@ -93,7 +94,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
-                <img
+                <Image
                   alt="Company Logo"
                   src="/images/brandLogo.png"
                   className="h-[40px] w-[150px]"

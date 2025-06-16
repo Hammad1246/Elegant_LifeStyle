@@ -7,6 +7,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const product = {
   images: ["/images/bed.png", "/images/bed2.png", "/images/bed.png"],
@@ -17,11 +18,13 @@ function CollectionSection() {
     <section className="w-full h-screen  bg-gradient-to-b from-[#504132] to-[#332518] relative flex justify-center items-center overflow-hidden">
       {/* Texture Wall */}
       <div className="w-[8%] h-full hidden lg:block">
-        <img
-          src="/images/textureWall.png"
-          alt="texture wall"
+        <Image
+          src="/images/textureWall.png" 
+          alt="Texture wall" 
           className="w-full h-full object-cover"
           loading="lazy"
+          width={800} 
+          height={600} 
         />
       </div>
 
@@ -78,11 +81,13 @@ function CollectionSection() {
             {product.images.map((image, index) => (
               <SwiperSlide key={index}>
                 <div className="w-full h-full aspect-video relative">
-                  <img
-                    src={image}
+                  <Image
+                    src={image} 
                     alt={`Product ${index + 1}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    width={400}
+                    height={400}
                   />
                 </div>
               </SwiperSlide>

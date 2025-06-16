@@ -3,6 +3,7 @@ import { PiExclamationMarkFill } from "react-icons/pi";
 import { useFurniture } from "@/app/context/FurnitureContext";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function ContactPage() {
   const { selectedFurniture } = useFurniture();
@@ -24,7 +25,7 @@ function ContactPage() {
             Request a Quote
           </h1>
           <p className="text-gray-500 mt-1">
-          Fill out the form below to get a customized quote for your needs.
+            Fill out the form below to get a customized quote for your needs.
           </p>
         </div>
 
@@ -32,10 +33,12 @@ function ContactPage() {
           <div className="flex flex-col min-h-[400px] bg-gray-50 rounded-lg overflow-hidden">
             {selectedFurniture && (
               <div className="relative group h-full flex items-center justify-center p-4">
-                <img
-                  src={selectedFurniture.image}
-                  alt={selectedFurniture.title}
-                  className="w-full h-full object-fill"
+                <Image
+                  src={selectedFurniture.image} 
+                  alt={selectedFurniture.title || "Furniture image"} 
+                  className="w-full h-full object-cover" 
+                  width={800}
+                  height={600}
                 />
               </div>
             )}

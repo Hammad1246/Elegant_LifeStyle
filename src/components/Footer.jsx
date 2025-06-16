@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa6";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -10,10 +11,12 @@ function Footer() {
         <div className="flex  justify-between  ">
           {/* Left Column */}
           <div className=" w-[40%] space-y-7">
-            <img
+            <Image
               src="/images/footerLogo.png"
               alt="Elegant Lifestyle"
               className="w-[247px] h-[64px] mb-6"
+              width={247}
+              height={64}
             />
             <p className="text-sm text-[#606060]">
               The advantage of hiring a workspace with us is that it gives you
@@ -142,7 +145,6 @@ function Footer() {
               className="hover:underline  !font-semibold  text-[#191D1F]"
               style={{
                 fontFamily: "var(--font-cardo), serif",
-               
               }}
             >
               Privacy Policy
@@ -153,7 +155,6 @@ function Footer() {
               className="hover:underline !font-semibold  text-[#191D1F]"
               style={{
                 fontFamily: "var(--font-cardo), serif",
-               
               }}
             >
               Terms & Conditions
@@ -164,7 +165,6 @@ function Footer() {
               className="hover:underline !font-semibold  text-[#191D1F]"
               style={{
                 fontFamily: "var(--font-cardo), serif",
-               
               }}
             >
               Cookie Policy

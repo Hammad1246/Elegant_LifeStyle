@@ -6,6 +6,7 @@ import InstagramGallery from "./InstagramGallery";
 import Link from "next/link";
 import { useFurniture } from "@/app/context/FurnitureContext";
 import { useRouter } from "next/navigation";
+import Image from 'next/image'
 
 const CATEGORIES = [
   { id: 1, category: "Beds", image: "/images/c1.png" },
@@ -115,7 +116,7 @@ const GalleryCategory = () => {
                   className="rounded-lg"
                   component="article"
                 >
-                  <img
+                  <Image
                     src={category.image}
                     alt={`${category.category} example`}
                     className="w-full h-64 object-cover cursor-pointer"

@@ -4,6 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Mousewheel } from "swiper/modules";
+import Image from "next/image";
 
 const images = [
   "/images/f1.png",
@@ -24,10 +25,10 @@ function InstagramGallery() {
 
       <div>
         <Swiper
-         modules={[Mousewheel]}
-                  mousewheel={{
-                    forceToAxis: true,
-                  }}
+          modules={[Mousewheel]}
+          mousewheel={{
+            forceToAxis: true,
+          }}
           spaceBetween={16}
           slidesPerView={2.2}
           grabCursor={true}
@@ -39,11 +40,13 @@ function InstagramGallery() {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={src}
-                alt={`Instagram post ${index + 1}`}
+              <Image
+                src={src} 
+                alt={`Instagram post ${index + 1}`} 
                 className="rounded-md w-full h-48 object-cover"
                 loading="lazy"
+                width={600} 
+                height={192} 
               />
             </SwiperSlide>
           ))}
