@@ -34,12 +34,11 @@ function Testimonials() {
   const handleNext = useCallback(() => swiperRef.current?.slideNext(), []);
 
   return (
-    <section className="my-12  bg-[#FFFFFF]">
+    <section className="my-16  bg-[#FFFFFF]">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-serif mb-2 text-[#191D1F]">Testimonials</h2>
+        <h2 className="text-4xl font-serif mb-2 text-[#191D1F]">Loved by Homes, Trusted by Hearts</h2>
         <p className="text-sm text-[#606060]">
-          We strive to provide our customers with the best possible shopping
-          experience.
+          Hear what our happy customers have to say about their comfort upgrade and stylish transformations.
         </p>
       </div>
 

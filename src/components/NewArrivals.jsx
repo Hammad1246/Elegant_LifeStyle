@@ -43,13 +43,13 @@ const furnitureData = [
 
 function NewArrivals() {
   return (
-    <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center my-12 gamp-8 md:gap-12">
+    <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center my-16 gamp-8 md:gap-12">
       <div className="text-center space-y-2">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#17161B]">
-          New Arrivals
+          Fresh Finds for Your Living Space
         </h1>
         <p className="text-[#606060] text-sm sm:text-base">
-          Look at the latest collection that we offer
+         Explore our latest collection of stylish, cozy sofas just arrived and ready to redefine your comfort.
         </p>
       </div>
 

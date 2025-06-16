@@ -6,33 +6,38 @@ const contactInfo = [
   {
     icon: <HiOutlineMap className="h-12 w-10" />,
     title: "Location",
-    content: "3/18 RUDLOC RD, MORLEY WA"
+    content: "3/18 RUDLOC RD, MORLEY WA",
   },
   {
     icon: <CiMail className="h-12 w-10" />,
     title: "Email",
-    content: "info@Demo.com.pk"
+    content: "info@Demo.com.pk",
   },
   {
     icon: <CiPhone className="h-12 w-10" />,
     title: "Contact No",
-    content: "+61 410 985 414 / +61 422 288 285"
-  }
+    content: "+61 410 985 414 / +61 422 288 285",
+  },
 ];
 
 function ContactForm() {
   return (
-    <section className="px-4 sm:px-8 md:px-16 lg:px-20 mt-12 bg-white">
+    <section className="px-4 sm:px-8 md:px-16 lg:px-20 mt-16 bg-white">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-semibold text-black ">Contact Us</h2>
-        <p className="text-gray-500 mt-1">Look at the latest collection that we offer</p>
+        <h2 className="text-4xl font-semibold text-black uppercase">
+          Let’s Bring Comfort Closer to You
+        </h2>
+        <p className="text-gray-500 mt-1">
+          Have a question, need a custom design, or ready to order? We’re just a
+          message away.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Contact Info */}
-        <div className="bg-gradient-to-br from-[#504132] to-[#332518] text-white p-8 rounded-xl shadow-md space-y-6">
-          <h3 className="text-2xl font-semibold">Let's Get In Touch</h3>
-          
+        <div className="bg-gradient-to-br from-[#504132] to-[#332518] text-white p-10 rounded-xl shadow-md space-y-6">
+          <h2 className="text-3xl !font-bold mb-10">Let's Get In Touch</h2>
+
           {contactInfo.map((item, index) => (
             <div key={index} className="flex justify-start items-start gap-2">
               {item.icon}
@@ -46,25 +51,55 @@ function ContactForm() {
 
         {/* Right Contact Form */}
         <form className="space-y-6 text-black">
+          <label
+            htmlFor="name"
+            className="text-sm"
+          >
+            Your Name <span className="text-red-500">*</span>
+          </label>
           <input
             type="text"
-            placeholder="Name"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
+            id="name"
+            required={true}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
           />
+           <label
+            htmlFor="email"
+             className="text-sm"
+          >
+            Email Address <span className="text-red-500">*</span>
+          </label>
           <input
             type="email"
-            placeholder="Email"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
+            id="email"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
           />
+           <label
+            htmlFor="phone"
+             className="text-sm"
+          >
+            Phone Number <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="phone"
+            id="phone"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
+          />
+           <label
+            htmlFor="message"
+             className="text-sm"
+          >
+            Message <span className="text-red-500">*</span>
+          </label>
           <textarea
-            placeholder="Message"
+            id="message"
             rows="5"
-            className="w-full px-4 py-3 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
           ></textarea>
           <button
             type="submit"
             className="w-full bg-gradient-to-br from-[#504132] to-[#332518] text-white py-3 rounded-md text-sm tracking-wide uppercase cursor-pointer transition"
-            onClick={(e)=> e.preventDefault()}
+            onClick={(e) => e.preventDefault()}
           >
             Submit
           </button>

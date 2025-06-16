@@ -65,7 +65,7 @@ const GalleryCategory = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-evenly items-center py-12">
+      <div className="min-h-screen flex flex-col justify-evenly items-center my-16">
         <h1 className="text-4xl text-[#191D1F] font-bold mb-4">
           Top Categories
         </h1>

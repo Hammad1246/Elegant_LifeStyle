@@ -44,7 +44,7 @@ function Hero() {
       />
 
       {/* Brand Logo */}
-      <div className="relative inset-0 flex items-start top-10 justify-center">
+      {/* <div className="relative inset-0 flex items-start top-10 justify-center">
         <Image
           src="/images/brandName.png"
           alt="Brand logo"
@@ -53,15 +53,14 @@ function Hero() {
           width={320}
           height={320}
         />
-      </div>
+      </div> */}
 
       {/* Content Section */}
-      <div className="w-auto h-[190px] absolute md;bottom-12 md:left-16 bottom-8 left-4 flex justify-between flex-col text-white">
+      <div className="w-auto h-[160px] absolute md:bottom-12 md:left-16 bottom-8 left-4 flex justify-between flex-col text-white">
         <div className="w-full h-auto flex flex-col gap-1.5">
-          <p className="md:text-sm text-xs">READY TO SHIP</p>
-          <h1 className="md:text-6xl text-3xl">In-Stock Sofas</h1>
+          <h1 className="md:text-6xl text-2xl">Comfort Crafted to Perfection</h1>
           <p className="md:text-sm text-xs">
-            Get set for the season with furniture that arrives by the holidays.
+            Discover premium sofas that blend timeless design with everyday comfort made for your home, built to last.
           </p>
         </div>
         <div>

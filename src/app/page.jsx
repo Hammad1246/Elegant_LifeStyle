@@ -6,19 +6,21 @@ import Categories from "@/components/Categories";
 import Testimonials from "@/components/Testimonials";
 import InstagramGallery from "@/components/InstagramGallery";
 import ContactForm from "@/components/ContactForm";
+import ShowRoom from "@/components/ShowRoom";
 
 export default function page() {
 
   return (
     <main className="w-screen h-auto ">
       <Hero />
-      <NewArrivals/>
+      {/* <NewArrivals/>
       <CollectionSection/>
       <WhyChooseUs/>
       <Categories/>
       <Testimonials/>
+      <ShowRoom/>
       <InstagramGallery/>
-      <ContactForm/>
+      <ContactForm/> */}
     </main>
   );
 }

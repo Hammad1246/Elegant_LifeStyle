@@ -19,7 +19,7 @@ function ContactPage() {
 
   return (
     <section className="min-h-screen px-4 sm:px-6 py-6 bg-white flex items-center mt-12">
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full max-w-5xl mx-auto">
         <div className="text-center pb-5">
           <h1 className="text-4xl font-bold text-[#332518] text-center">
             Request a Quote
@@ -29,32 +29,34 @@ function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-          <div className="flex flex-col min-h-[400px] bg-gray-50 rounded-lg overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-stretch">
+          <div className="flex w-full flex-col min-h-[400px] bg-gray-50 rounded-lg overflow-hidden lg:col-span-4">
             {selectedFurniture && (
-              <div className="relative group h-full flex items-center justify-center p-4">
-                <Image
-                  src={selectedFurniture.image} 
-                  alt={selectedFurniture.title || "Furniture image"} 
-                  className="w-full h-full object-cover" 
-                  width={800}
-                  height={600}
-                />
-              </div>
+              <Image
+                src={selectedFurniture.image}
+                alt={selectedFurniture.title || "Furniture image"}
+                className="w-full h-[500px] object-cover rounded-2xl"
+                width={800}
+                height={500}
+              />
             )}
           </div>
 
           {/* Right Form Section */}
-          <form className="h-full bg-gradient-to-br from-[#504132] to-[#332518] text-white p-4 sm:p-5 rounded-lg shadow-md">
+          <form className="h-[500px] w-full  text-black p-4 sm:p-5 rounded-lg shadow-md lg:col-span-6">
             <div className="space-y-4">
               <div>
-                <h2 className="text-lg font-bold mb-3 pb-1 border-b border-[#FAD02E]/30">
-                  Product Information
-                </h2>
+                <div className="flex items-center w-full gap-2 pb-3">
+                  <h2 className="text-lg font-bold whitespace-nowrap">
+                    Product Information
+                  </h2>
+                  <span className="h-px flex-1 bg-[#332518]/30"></span>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="md:col-span-2">
                     <label className="block text-xs font-medium mb-1">
-                      Product
+                      Category <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -65,7 +67,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <label className="block text-xs font-medium mb-1">
-                      Quantity
+                      Quantity <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="number"
@@ -78,37 +80,40 @@ function ContactPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-bold mb-3 pb-1 border-b border-[#FAD02E]/30">
-                  Contact Information
-                </h2>
+                <div className="flex items-center w-full gap-2 pb-3">
+                  <h2 className="text-lg font-bold whitespace-nowrap">
+                    Contact Information
+                  </h2>
+                  <span className="h-px flex-1 bg-[#332518]/30"></span>
+                </div>
                 <div className="space-y-3">
                   <div>
                     <label className="block text-xs font-medium mb-1">
-                      Full Name
+                      Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
-                      placeholder="John Doe"
+                     
                       className="w-full border border-gray-300 bg-gray-100 text-black p-2 text-sm rounded-md focus:outline-none focus:ring-1 focus:ring-[#332518]"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-medium mb-1">
-                      Email Address
+                      Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
-                      placeholder="your@email.com"
+                     
                       className="w-full border border-gray-300 bg-gray-100 text-black p-2 text-sm rounded-md focus:outline-none focus:ring-1 focus:ring-[#332518]"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-medium mb-1">
-                      Phone Number
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
-                      placeholder="+1 (___) ___-____"
+                    
                       className="w-full border border-gray-300 bg-gray-100 text-black p-2 text-sm rounded-md focus:outline-none focus:ring-1 focus:ring-[#332518]"
                     />
                   </div>
@@ -118,7 +123,7 @@ function ContactPage() {
               <div className="flex items-start">
                 <PiExclamationMarkFill className="text-white mt-0.5 mr-1.5 flex-shrink-0 text-sm" />
                 <label className="text-xs">
-                  By submitting this form, you agree to our{" "}
+                  Read our{" "}
                   <a href="#" className="font-bold hover:underline transition">
                     Privacy Policy
                   </a>{" "}

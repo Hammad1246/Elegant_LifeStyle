@@ -15,7 +15,7 @@ function page() {
       <AboutUs />
       <AboutCollection />
       <TopCategory />
-      <section className="py-12 flex justify-center items-center flex-col space-y-4">
+      <section className="py-16 flex justify-center items-center flex-col space-y-4">
         <h1 className="text-4xl text-black">Ready to experience Luxury ?</h1>
         <p className="text-[#868686]">
           Look at the latest collection that we offer

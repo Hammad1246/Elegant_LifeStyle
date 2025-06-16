@@ -6,7 +6,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer className="bg-white  w-full flex justify-center items-center">
-      <div className="container mb-8 mt-20 w-[90%]">
+      <div className="container mb-8 mt-16 w-[90%]">
         {/* Top Section */}
         <div className="flex  justify-between  ">
           {/* Left Column */}

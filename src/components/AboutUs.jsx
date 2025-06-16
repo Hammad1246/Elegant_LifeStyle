@@ -3,11 +3,11 @@ import React, { useMemo } from "react";
 import Image from "next/image";
 
 const IMAGES = [
-  { id: 1, image: "/images/c1.png", alt: "About us image 1" },
-  { id: 2, image: "/images/c2.png", alt: "About us image 2" },
-  { id: 3, image: "/images/c3.png", alt: "About us image 3" },
-  { id: 4, image: "/images/c14.png", alt: "About us image 4" },
-  { id: 5, image: "/images/c15.png", alt: "About us image 5" },
+  { id: 1, image: "/images/aboutS1.png", alt: "About us image 1" },
+  { id: 2, image: "/images/aboutS2.png", alt: "About us image 2" },
+  { id: 3, image: "/images/aboutS3.png", alt: "About us image 3" },
+  { id: 4, image: "/images/aboutS4.png", alt: "About us image 4" },
+  { id: 5, image: "/images/aboutS5.png", alt: "About us image 5" },
 ];
 
 const GRID_STYLES = {
@@ -22,7 +22,7 @@ function AboutUs() {
   const imageGrid = useMemo(
     () => [
       // First row - 2 images side by side
-      { image: IMAGES[3], colSpan: 1 },
+      { image: IMAGES[1], colSpan: 1 },
       { image: IMAGES[4], colSpan: 1 },
       // Second row - 1 full width image
       { image: IMAGES[2], colSpan: 2 },
@@ -37,7 +37,7 @@ function AboutUs() {
     <div className="h-screen px-10 flex justify-center items-center">
       {/* Text Content */}
       <div className="w-[50%] h-full flex flex-col justify-center items-left px-6 space-y-5">
-        <h1 className="text-black text-4xl">About Us</h1>
+        <h1 className="text-black text-4xl">Where Style Meets Comfort</h1>
         <p className="text-sm text-[#868686]">
           Lorem ipsum dolor sit amet consectetur. Cras lorem ultrices morbn
           vitae. Diam amet lectus interdum libero ante sit tortor. Sollicitudin

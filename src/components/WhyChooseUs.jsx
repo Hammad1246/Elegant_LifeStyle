@@ -26,13 +26,12 @@ const benefits = [
 
 function WhyChooseUs() {
   return (
-    <section className="w-full bg-white my-12 px-4 md:px-20 text-center">
-      <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-4">
-        Why Choose Us
+    <section className="w-full bg-white my-16 px-4 md:px-20 text-center">
+      <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-2">
+        Why We’re a Perfect Fit
       </h2>
       <p className="text-[#606060] mb-14">
-        We strive to provide our customers with the best possible shopping
-        experience.
+       From premium craftsmanship to personalized comfort, discover what sets our sofas and service apart.
       </p>
 
       <div className="flex flex-wrap justify-between gap-8 text-left w-auto">

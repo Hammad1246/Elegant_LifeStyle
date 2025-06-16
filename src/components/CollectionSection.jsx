@@ -8,23 +8,26 @@ import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import React, { useRef, useState } from "react";
 
 const product = {
-  images: ["/images/bed.png", "/images/bed2.png", "/images/bed.png"],
+  images: ["/images/sofa1.png", "/images/bed.png", "/images/bed.png"],
 };
 
 function CollectionSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
   return (
     <section className="w-full h-screen  bg-gradient-to-b from-[#504132] to-[#332518] relative flex justify-center items-center overflow-hidden">
       {/* Texture Wall */}
       <div className="w-[8%] h-full hidden lg:block">
         <Image
-          src="/images/textureWall.png" 
-          alt="Texture wall" 
+          src="/images/textureWall.png"
+          alt="Texture wall"
           className="w-full h-full object-cover"
           loading="lazy"
-          width={800} 
-          height={600} 
+          width={800}
+          height={600}
         />
       </div>
 
@@ -33,17 +36,21 @@ function CollectionSection() {
         {/* Sidebar */}
         <div className="w-full lg:w-[25%] px-3 h-auto lg:h-full flex flex-col justify-between items-start space-y-4">
           <div className="space-y-3">
-            <h1 className="text-xl sm:text-2xl lg:text-4xl">OUR COLLECTION</h1>
-            <p className="text-sm">
-              Look at the latest collection that we offer
+            <h1 className="text-xl sm:text-2xl lg:text-4xl uppercase">
+              Sofas for Every Style
+            </h1>
+            <p className="text-md">
+              Modern to classic curated sofas for every home.
             </p>
           </div>
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl lg:text-2xl">Living Room Set</h2>
-            <p className="text-sm">
-              The room you spend the most time relaxing is your living room.
-              Combine modern style with comfort to make your living room more
-              comfortable.
+            <h2 className="text-lg sm:text-xl lg:text-2xl">
+              Cream Grey Velvet Elegance
+            </h2>
+            <p className="text-md">
+              A luxurious 3+2+1 sofa set with plush velvet upholstery and a
+              striking gold base — perfect for adding comfort and style to any
+              modern living space. Complimentary delivery & setup included.
             </p>
             <Button
               sx={{
@@ -77,12 +84,14 @@ function CollectionSection() {
               nextEl: ".custom-next",
             }}
             className="w-full h-full relative"
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {product.images.map((image, index) => (
               <SwiperSlide key={index}>
                 <div className="w-full h-full aspect-video relative">
                   <Image
-                    src={image} 
+                    src={image}
                     alt={`Product ${index + 1}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -97,7 +106,9 @@ function CollectionSection() {
           {/* Navigation Buttons */}
           <button
             aria-label="Previous slide"
-            className="custom-prev absolute left-4 sm:left-8 lg:left-24 top-1/2 -translate-y-1/2 z-10 bg-opacity-89 border border-zinc-500 border-opacity-30 backdrop-blur-2xl p-2 sm:p-3 rounded-full shadow-md  transition cursor-pointer"
+            className={`custom-prev absolute left-4 sm:left-8 lg:left-24 top-1/2 -translate-y-1/2 z-10 bg-opacity-89 border border-zinc-500 border-opacity-30 backdrop-blur-2xl p-2 sm:p-3 rounded-full shadow-md transition cursor-pointer
+           ${activeIndex === 0 ? "invisible pointer-events-none" : ""}
+          `}
           >
             <FiChevronLeft size={20} />
           </button>

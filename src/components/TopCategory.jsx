@@ -7,7 +7,7 @@ const CATEGORIES = [
     title: "Sofas",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    image: "/images/c9.png",
+    image: "/images/furnishC1.png",
     imageFirst: true,
   },
   {
@@ -15,7 +15,7 @@ const CATEGORIES = [
     title: "Coffee Tables",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    image: "/images/c4.png",
+    image:"/images/furnishC2.png",
     imageFirst: false,
   },
   {
@@ -23,7 +23,7 @@ const CATEGORIES = [
     title: "Dining Tables",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    image: "/images/c6.png",
+    image:"/images/furnishC3.png",
     imageFirst: true,
   },
   {
@@ -31,7 +31,7 @@ const CATEGORIES = [
     title: "Beds",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    image: "/images/c15.png",
+    image: "/images/furnishC4.png",
     imageFirst: false,
   },
 ];
@@ -40,10 +40,10 @@ function TopCategory() {
   return (
     <section className="h-auto w-full bg-gradient-to-b from-[#504132] to-[#332518] py-16">
       <div className="flex flex-col items-center">
-        <div className="text-center mb-12">
-          <h1 className="text-white text-4xl mb-2">OUR TOP CATEGORIES</h1>
-          <p className="text-[#d4c2b8]">
-            Look at the latest collection that we offer
+        <div className="text-center mb-16 flex flex-col justify-between items-center">
+          <h1 className="text-white text-4xl mb-2 uppercase">Furnish Your Dream Home, One Piece at a Time</h1>
+          <p className="text-[#d4c2b8] w-[70%]">
+           Explore our standout sofas, chic coffee tables, and dining essentials crafted to transform your space into something extraordinary.
           </p>
         </div>
 
@@ -64,9 +64,9 @@ function TopCategory() {
                     height={450} 
                   />
                   <div>
-                    <h3 className="text-white text-2xl pb-2 font-semibold">
+                    <h1 className="text-white text-4xl pb-2 font-semibold">
                       {category.title}
-                    </h3>
+                    </h1>
                     <p className="text-[#d4c2b8] text-sm">
                       {category.description}
                     </p>
@@ -75,9 +75,9 @@ function TopCategory() {
               ) : (
                 <>
                   <div>
-                    <h3 className="text-white text-2xl pb-2 font-semibold">
+                    <h1 className="text-white text-3xl pb-2 font-semibold">
                       {category.title}
-                    </h3>
+                    </h1>
                     <p className="text-[#d4c2b8] text-sm">
                       {category.description}
                     </p>
@@ -87,7 +87,7 @@ function TopCategory() {
                     alt={category.title || "Category image"}
                     width={800} 
                     height={450} 
-                    className="object-cover shadow-md w-full"
+                    className="object-cover shadow-md w-full h-[450px]"
                     loading="lazy"
                   />
                 </>
