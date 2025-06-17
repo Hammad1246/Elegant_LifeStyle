@@ -47,7 +47,7 @@ function AboutCollection() {
     <section className="w-full bg-white md:mb-12 mb-5 ">
       <div className="text-center mb-8">
         <h2 className="md:text-4xl text-2xl font-semibold text-black uppercase">Our Signature Sofa Collection</h2>
-        <p className="text-gray-500 md:text-base text-xs">
+        <p className="text-gray-500 md:text-base text-xs px-2">
           From sleek modern designs to timeless classics each piece in our collection reflects our passion for quality, comfort, and craftsmanship.
         </p>
       </div>
@@ -59,7 +59,7 @@ function AboutCollection() {
             forceToAxis: true,
           }}
           spaceBetween={20}
-          slidesPerView={1.2}
+          slidesPerView={1.5}
           navigation={{ prevEl: ".custom-prev", nextEl: ".custom-next" }}
           className="relative"
         >
@@ -72,7 +72,7 @@ function AboutCollection() {
                     alt={product.title}
                     width={800}
                     height={500}
-                    className="w-full md:h-[430px] h-[200px] object-cover"
+                    className="w-full md:h-[400px] h-[200px] object-cover"
                   />
                 </div>
                 <div className="py-6">
