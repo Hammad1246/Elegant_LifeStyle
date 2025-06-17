@@ -18,8 +18,8 @@ function ContactPage() {
   if (!selectedFurniture) return null; // Prevent flicker
 
   return (
-    <section className="min-h-screen px-4 sm:px-6 py-6 bg-white flex items-center mt-12">
-      <div className="w-full max-w-5xl mx-auto">
+    <section className="min-h-screen md:px-12 px-6 py-6 bg-white flex items-center mt-12">
+      <div className="w-full ">
         <div className="text-center pb-5">
           <h1 className="text-4xl font-bold text-[#332518] text-center">
             Request a Quote
@@ -30,12 +30,12 @@ function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-stretch">
-          <div className="flex w-full flex-col min-h-[400px] bg-gray-50 rounded-lg overflow-hidden lg:col-span-4">
+          <div className="flex w-full flex-col md:min-h-[400px] min-h-[300px] bg-gray-50 rounded-lg overflow-hidden lg:col-span-4">
             {selectedFurniture && (
               <Image
                 src={selectedFurniture.image}
                 alt={selectedFurniture.title || "Furniture image"}
-                className="w-full h-[500px] object-cover rounded-2xl"
+                className="w-full md:h-[500px] h-[300px] object-cover rounded-2xl"
                 width={800}
                 height={500}
               />

@@ -44,7 +44,7 @@ const furnitureData = [
 function NewArrivals() {
   return (
     <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center md:my-16 my-8 gap-7  md:gap-12">
-      <div className="text-center space-y-2 w-[80%]">
+      <div className="text-center space-y-2 w-full px-6 md:px-12">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#17161B]">
           Fresh Finds for Your Living Space
         </h1>
@@ -53,7 +53,7 @@ function NewArrivals() {
         </p>
       </div>
 
-      <div className="w-full mx-auto">
+      <div className="w-full px-6 md:px-12">
         <Swiper
           modules={[Mousewheel]}
           mousewheel={{
