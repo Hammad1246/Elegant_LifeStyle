@@ -18,7 +18,7 @@ const images = [
 function InstagramGallery() {
   return (
     <section className=" bg-white w-full ">
-      <h2 className="text-center text-lg md:text-xl font-serif mb-6 text-[#212121]">
+      <h2 className="text-center text-lg md:text-xl font-serif mb-6 text-[#212121] px-6 md:px-0">
         Follow us on Instagram{" "}
         <span className="font-bold text-[#212121]">@elegantlifestyleperth</span>
       </h2>
