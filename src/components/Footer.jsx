@@ -418,7 +418,7 @@ function Footer() {
           {/* Links Section - ALWAYS 4 COLUMNS (forced horizontal layout) */}
           <div className="w-full lg:w-[50%] flex justify-between items-start overflow-hidden py-2">
             {/* Company */}
-            <div className="min-w-[120px] mx-2">
+            <div className="min-w-auto mx-2">
               <h4 className="!font-semibold text-lg text-[#191D1F] mb-4">
                 Company
               </h4>
@@ -447,7 +447,7 @@ function Footer() {
             </div>
 
             {/* Products */}
-            <div className="min-w-[120px] mx-2">
+            <div className="min-w-auto mx-2">
               <h5 className="!font-semibold text-lg text-[#191D1F] mb-4">
                 Products
               </h5>
@@ -476,7 +476,7 @@ function Footer() {
             </div>
 
             {/* Follow Us */}
-            <div className="min-w-[120px] mx-2">
+            <div className="min-w-auto mx-2">
               <h5 className="!font-semibold text-lg text-[#191D1F] mb-4">
                 Follow Us
               </h5>
