@@ -35,8 +35,8 @@ function Testimonials() {
 
   return (
     <section className="md:my-16 my-8  bg-[#FFFFFF]">
-      <div className="text-center mb-10 px-4 md:px-0">
-        <h2 className="md:text-4xl text-2xl font-serif mb-2 text-[#191D1F]">Loved by Homes, Trusted by Hearts</h2>
+      <div className="text-center mb-10 px-6 md:px-12">
+        <h2 className="md:text-4xl text-2xl font-serif mb-1 text-[#191D1F]">Loved by Homes, Trusted by Hearts</h2>
         <p className="md:text-sm text-xs text-[#606060]">
           Hear what our happy customers have to say about their comfort upgrade and stylish transformations.
         </p>
@@ -44,7 +44,7 @@ function Testimonials() {
 
       <div className="relative px-4 max-w-screen-xl mx-auto overflow-hidden">
         <Swiper
-          spaceBetween={20}
+          spaceBetween={12}
           slidesPerView={1.2}
           centeredSlides
           centeredSlidesBounds

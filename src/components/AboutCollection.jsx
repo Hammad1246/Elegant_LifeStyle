@@ -47,12 +47,12 @@ function AboutCollection() {
     <section className="w-full bg-white md:mb-12 mb-5 ">
       <div className="text-center mb-8">
         <h2 className="md:text-4xl text-2xl font-semibold text-black uppercase">Our Signature Sofa Collection</h2>
-        <p className="text-gray-500 md:text-base text-xs px-2">
+        <p className="text-gray-500 md:text-base text-xs px-6">
           From sleek modern designs to timeless classics each piece in our collection reflects our passion for quality, comfort, and craftsmanship.
         </p>
       </div>
 
-      <div className="w-full md:pl-16 pl-6">
+      <div className="w-full md:pl-12 pl-6">
        <Swiper
           modules={[Mousewheel]}
           mousewheel={{

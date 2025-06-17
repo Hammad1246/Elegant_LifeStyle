@@ -34,9 +34,9 @@ function AboutUs() {
   );
 
   return (
-    <div className="md:h-screen h-auto md:px-10 px-5 py-10 md:py-0 flex flex-col md:flex-row justify-center items-center">
+    <div className="md:h-screen h-auto md:px-12 px-6 py-10 md:py-0 flex flex-col md:flex-row justify-center items-center">
       {/* Text Content */}
-      <div className="md:w-[50%] w-full h-full flex flex-col justify-center items-left md:px-6 space-y-5">
+      <div className="md:w-[50%] w-full h-full flex flex-col justify-center items-left  space-y-5">
         <h1 className="text-black md:text-4xl text-2xl text-center md:text-start">Where Style Meets Comfort</h1>
         <p className="text-sm text-[#868686]">
           Lorem ipsum dolor sit amet consectetur. Cras lorem ultrices morbn

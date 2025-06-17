@@ -34,9 +34,9 @@ const categories = [
 
 function Categories() {
   return (
-    <section className="md:h-screen h-auto bg-white px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col ">
+    <section className="md:h-screen w-full h-auto bg-white px-6 md:px-12  flex flex-col ">
       {/* Header */}
-      <div className="flex justify-between items-center md:py-6 pb-3 md:pb-0 px-5">
+      <div className="flex justify-between items-center md:py-6 pb-3 ">
         <h1 className="text-black md:text-4xl text-2xl ">Top Categories</h1>
         <Link href={"/gallery"}>
           <Button
@@ -52,7 +52,7 @@ function Categories() {
             }}
             variant="contained"
           >
-            <p className="flex whitespace-nowrap gap-2 items-center md:text-sm text-xs px-1 ">
+            <p className="flex whitespace-nowrap gap-2 items-center md:text-sm text-xs  ">
               Explore Gallery <GoArrowUpRight />
             </p>
           </Button>
@@ -62,12 +62,12 @@ function Categories() {
       {/* Content */}
       <div className="w-full h-[85%] flex flex-col md:flex-row ">
         {/* Left Section (Sofas) */}
-        <div className="md:w-[50%] w-[100%] h-auto p-4">
+        <div className="md:w-[50%] w-[100%] h-auto ">
           <CategoryCard {...categories[0]} />
         </div>
 
         {/* Right Section */}
-        <div className="md:w-[50%] w-[100%] h-auto flex flex-col gap-4 p-4">
+        <div className="md:w-[50%] w-[100%] h-auto flex flex-col gap-4 md:pl-4 pt-4 md:pt-0">
           {/* Coffee Tables */}
           <div className="w-full h-[50%]">
             <CategoryCard {...categories[1]} />

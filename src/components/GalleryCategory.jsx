@@ -69,13 +69,13 @@ const GalleryCategory = () => {
         <h1 className="text-2xl md:text-4xl text-[#191D1F] font-bold mb-4">
           Top Categories
         </h1>
-        <p className="text-center text-[#868686] md:mb-12 mb-6 text-xs md:text-base ">
+        <p className="text-center text-[#868686] md:mb-12 mb-6 text-xs md:text-base px-6 md:px-0 ">
           Lorem ipsum is simply dummy text of the printing and typesetting
           industry. Lorem ipsum has been the industry's
         </p>
 
         {/* Filter Buttons */}
-        <div className="flex md:justify-center md:items-center gap-2 sm:gap-4 mb-8 overflow-x-auto no-scrollbar w-full px-2 md-px-0">
+        <div className="flex md:justify-center md:items-center gap-2 sm:gap-4 mb-8 overflow-x-auto no-scrollbar w-full px-6 md-px-0">
           {FILTER_OPTIONS.map((category) => (
             <button
               key={category}
@@ -97,7 +97,7 @@ const GalleryCategory = () => {
         <div className="w-full h-auto flex justify-center items-center">
           <Box
             sx={GRID_STYLES}
-            className="max-w-[90%] mb-10"
+            className=" px-6 md:px-12 mb-10"
             component="section"
             aria-live="polite"
           >

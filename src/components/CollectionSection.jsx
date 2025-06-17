@@ -35,8 +35,8 @@ function CollectionSection() {
        <div className="w-full lg:w-[92%] h-full lg:h-[80%] text-white flex flex-col lg:flex-row gap-6 lg:gap-0 px-2 py-6 lg:py-0">
         {/* Sidebar */}
         <div className="w-full lg:w-[25%] px-2 sm:px-4 lg:px-3 h-auto lg:h-full flex flex-col justify-between items-start space-y-4 md:mb-6 mb-3 lg:mb-0">
-          <div className="md:space-y-4 space-y-1 mb-6 md:md-0">
-            <h1 className="text-lg sm:text-xl lg:text-4xl uppercase">
+          <div className="md:space-y-4  mb-6 md:md-0">
+            <h1 className="text-lg  md:text-4xl uppercase">
               Sofas for Every Style
             </h1>
             <p className="text-xs sm:text-base lg:text-base">

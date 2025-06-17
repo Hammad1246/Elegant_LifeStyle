@@ -26,7 +26,7 @@ const benefits = [
 
 function WhyChooseUs() {
   return (
-    <section className="w-full bg-white my-16 px-4 md:px-20 text-center">
+    <section className="w-full bg-white my-16 px-6 md:px-12 text-center">
       <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-2">
         Why We’re a Perfect Fit
       </h2>

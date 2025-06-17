@@ -17,13 +17,13 @@ const images = [
 
 function InstagramGallery() {
   return (
-    <section className=" bg-white ">
+    <section className=" bg-white w-full ">
       <h2 className="text-center text-lg md:text-xl font-serif mb-6 text-[#212121]">
         Follow us on Instagram{" "}
         <span className="font-bold text-[#212121]">@elegantlifestyleperth</span>
       </h2>
 
-      <div>
+      <div className="px-6 md:px-12">
         <Swiper
           modules={[Mousewheel]}
           mousewheel={{

@@ -22,7 +22,7 @@ const contactInfo = [
 
 function ContactForm() {
   return (
-    <section className="px-4 sm:px-8 md:px-16 lg:px-20 mt-16 bg-white">
+    <section className="px-6  md:px-12 mt-16 bg-white">
       <div className="text-center mb-10">
         <h2 className="md:text-4xl text-2xl font-semibold text-black uppercase">
           Let’s Bring Comfort Closer to You
@@ -93,7 +93,7 @@ function ContactForm() {
           </label>
           <textarea
             id="message"
-            rows="5"
+            rows="4"
             className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#332518]"
           ></textarea>
           <button

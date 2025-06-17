@@ -47,7 +47,7 @@ function TopCategory() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:gap-20 gap-5 space-y-5 md:space-y-0 md:w-[90%] px-5">
+        <div className="grid grid-cols-2 md:gap-20 gap-5 space-y-5 md:space-y-0 md:px-12  px-6">
           {CATEGORIES.map((category) => (
             <div
               key={category.id}
