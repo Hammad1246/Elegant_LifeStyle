@@ -52,7 +52,7 @@ function AboutCollection() {
         </p>
       </div>
 
-      <div className="w-full md:pl-12 pl-6">
+      <div className="w-full md:px-12 px-6">
        <Swiper
           modules={[Mousewheel]}
           mousewheel={{
