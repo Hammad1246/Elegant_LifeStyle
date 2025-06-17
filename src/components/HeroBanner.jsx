@@ -24,31 +24,31 @@ function HeroBanner({ bannerName }) {
 
   return (
     <section
-      className="h-[335px] bg-cover bg-center bg-no-repeat"
+      className="md:h-[335px] h-[250px] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url('${currentSlide.image}')` }}
       aria-label="Image carousel"
     >
       {/* Overlay */}
       <div 
-        className="absolute top-[102px] h-[233px] inset-0 bg-black opacity-27"
+        className="absolute top-[102px] md:h-[233px] h-[148px] inset-0 bg-black opacity-27"
         aria-hidden="true"
       />
 
       {/* Navigation and Content */}
       <div className="relative flex justify-center items-center h-full">
-        <div className="flex w-full h-auto justify-between items-center px-7">
+        <div className="flex w-full h-auto justify-between items-center md:px-7 px-4 mt-10 md:mt-0">
           <button
-            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
+            className="md:w-12 md:h-8 w-9 h-5 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
             onClick={handlePrevSlide}
             aria-label="Previous slide"
           >
             <IoIosArrowBack />
           </button>
 
-          <h1 className="text-white text-6xl">{bannerName}</h1>
+          <h1 className="text-white md:text-6xl text-4xl">{bannerName}</h1>
           
           <button
-            className="w-12 h-8 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
+            className="md:w-12 md:h-8 w-9 h-5 bg-opacity-19 border border-gray-500 border-opacity-30 backdrop-blur-md flex justify-center items-center cursor-pointer"
             onClick={handleNextSlide}
             aria-label="Next slide"
           >

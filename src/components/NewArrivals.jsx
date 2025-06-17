@@ -45,10 +45,10 @@ function NewArrivals() {
   return (
     <section className="h-auto lg:min-h-screen bg-white flex flex-col justify-center items-center md:my-16 my-8 gap-7  md:gap-12">
       <div className="text-center space-y-2 w-[80%]">
-        <h1 className="text-xl sm:text-3xl lg:text-4xl text-[#17161B]">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#17161B]">
           Fresh Finds for Your Living Space
         </h1>
-        <p className="text-[#606060]  text-xs md:text-sm sm:text-base ">
+        <p className="text-[#606060]  text-xs md:text-sm ">
          Explore our latest collection of stylish, cozy sofas just arrived and ready to redefine your comfort.
         </p>
       </div>
@@ -59,8 +59,8 @@ function NewArrivals() {
           mousewheel={{
             forceToAxis: true,
           }}
-          spaceBetween={20}
-          slidesPerView={1.2}
+          spaceBetween={5}
+          slidesPerView={1.8}
           breakpoints={{
             640: { slidesPerView: 1.5 },
             768: { slidesPerView: 2.5 },
@@ -89,7 +89,7 @@ function NewArrivals() {
           }}
           variant="contained"
         >
-          <p className="flex gap-2 items-center text-xs md:text-sm px-4">
+          <p className="flex gap-2 items-center text-xs md:text-sm md:px-4 px-2">
             VIEW ALL <GoArrowUpRight />
           </p>
         </Button>

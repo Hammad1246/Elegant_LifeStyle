@@ -43,7 +43,7 @@ function InstagramGallery() {
               <Image
                 src={src} 
                 alt={`Instagram post ${index + 1}`} 
-                className="rounded-md w-full h-48 object-cover"
+                className="rounded-md w-full md:h-48 h-36 object-cover"
                 loading="lazy"
                 width={600} 
                 height={192} 

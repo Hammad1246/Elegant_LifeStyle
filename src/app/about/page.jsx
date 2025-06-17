@@ -15,9 +15,9 @@ function page() {
       <AboutUs />
       <AboutCollection />
       <TopCategory />
-      <section className="py-16 flex justify-center items-center flex-col space-y-4">
-        <h1 className="text-4xl text-black">Ready to experience Luxury ?</h1>
-        <p className="text-[#868686]">
+      <section className="py-8 md:py-16 flex justify-center items-center flex-col  md:space-y-2 space-y-1">
+        <h1 className="text-2xl md:text-4xl text-black">Ready to experience Luxury ?</h1>
+        <p className="text-[#868686] text-xs md:text-base mb-4 ">
           Look at the latest collection that we offer
         </p>
         <Link href={"/contact"}>
@@ -25,7 +25,7 @@ function page() {
             sx={{
               backgroundColor: "#1D1D1D",
               width: "auto",
-              height: "45px",
+              height: { xs: "40px", md: "45px" },
               borderRadius: "0px",
               border: "1px solid gray",
               "&:hover": {
@@ -34,7 +34,7 @@ function page() {
             }}
             variant="contained"
           >
-            <p className="flex gap-2 items-center text-sm px-4">
+            <p className="flex gap-2 items-center text-sm px-2 md:px-4">
               Contact Us <GoArrowUpRight />
             </p>
           </Button>

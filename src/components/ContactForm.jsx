@@ -24,33 +24,33 @@ function ContactForm() {
   return (
     <section className="px-4 sm:px-8 md:px-16 lg:px-20 mt-16 bg-white">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-semibold text-black uppercase">
+        <h2 className="md:text-4xl text-2xl font-semibold text-black uppercase">
           Let’s Bring Comfort Closer to You
         </h2>
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 mt-1 md:text-base text-xs">
           Have a question, need a custom design, or ready to order? We’re just a
           message away.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5">
         {/* Left Contact Info */}
-        <div className="bg-gradient-to-br from-[#504132] to-[#332518] text-white p-10 rounded-xl shadow-md space-y-6">
-          <h2 className="text-3xl !font-bold mb-10">Let's Get In Touch</h2>
+        <div className="bg-gradient-to-br from-[#504132] to-[#332518] text-white md:p-10 p-5 rounded-xl shadow-md space-y-6">
+          <h2 className="md:text-3xl text-lg  !font-bold md:mb-10 mb-6">Let's Get In Touch</h2>
 
           {contactInfo.map((item, index) => (
             <div key={index} className="flex justify-start items-start gap-2">
               {item.icon}
               <div>
-                <h3 className="!font-semibold mb-1">{item.title}</h3>
-                <p>{item.content}</p>
+                <h3 className="!font-semibold mb-1 md:text-base text-sm">{item.title}</h3>
+                <p className="md:text-base text-xs">{item.content}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Right Contact Form */}
-        <form className="space-y-6 text-black">
+        <form className="md:space-y-6 space-y-3 text-black">
           <label
             htmlFor="name"
             className="text-sm"

@@ -18,7 +18,7 @@ export default function FurnitureCard({ title, price, oldPrice, image }) {
         alt={title}
         width={800}
         height={400}
-        className="w-full h-56 md:h-72 object-cover rounded-lg"
+        className="md:w-full h-36 w-64 md:h-72 object-cover rounded-lg"
       />
       <div className="py-4">
         <h2 className="md:text-2xl text-xl text-black ">{title}</h2>

@@ -27,23 +27,23 @@ const benefits = [
 function WhyChooseUs() {
   return (
     <section className="w-full bg-white my-16 px-4 md:px-20 text-center">
-      <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-2">
+      <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-2">
         Why We’re a Perfect Fit
       </h2>
-      <p className="text-[#606060] mb-14">
+      <p className="text-[#606060] mb-14 text-xs md:text-base">
        From premium craftsmanship to personalized comfort, discover what sets our sofas and service apart.
       </p>
 
-      <div className="flex flex-wrap justify-between gap-8 text-left w-auto">
+      <div className="flex flex-wrap justify-between gap-8 text-left w-full">
         {benefits.map((benefit, index) => (
-          <div key={index} className="flex flex-col items-start space-y-5 w-80">
+          <div key={index} className="flex flex-col items-start space-y-5 md:w-80 ">
             <div className="flex items-center gap-3">
               {benefit.icon}
               <h3 className="text-lg font-semibold text-gray-900">
                 {benefit.title}
               </h3>
             </div>
-            <p className="text-[#606060] text-md">
+            <p className="text-[#606060] md:text-base text-sm ">
               {benefit.description}
             </p>
           </div>

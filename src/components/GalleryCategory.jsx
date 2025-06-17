@@ -2,11 +2,11 @@
 import React, { useState, useMemo } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { Box } from "@mui/material";
-import InstagramGallery from "./InstagramGallery";
 import Link from "next/link";
 import { useFurniture } from "@/app/context/FurnitureContext";
 import { useRouter } from "next/navigation";
-import Image from 'next/image'
+import Image from "next/image";
+import Button from "@mui/material/Button";
 
 const CATEGORIES = [
   { id: 1, category: "Beds", image: "/images/c1.png" },
@@ -65,22 +65,22 @@ const GalleryCategory = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-evenly items-center my-16">
-        <h1 className="text-4xl text-[#191D1F] font-bold mb-4">
+      <div className="min-h-screen flex flex-col justify-evenly items-center my-8 md:my-16">
+        <h1 className="text-2xl md:text-4xl text-[#191D1F] font-bold mb-4">
           Top Categories
         </h1>
-        <p className="text-center text-[#868686] mb-12 ">
+        <p className="text-center text-[#868686] md:mb-12 mb-6 text-xs md:text-base ">
           Lorem ipsum is simply dummy text of the printing and typesetting
           industry. Lorem ipsum has been the industry's
         </p>
 
         {/* Filter Buttons */}
-        <div className="flex gap-4 mb-8">
+        <div className="flex md:justify-center md:items-center gap-2 sm:gap-4 mb-8 overflow-x-auto no-scrollbar w-full px-2 md-px-0">
           {FILTER_OPTIONS.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`relative px-6 py-2 text-black group cursor-pointer ${
+              className={`relative px-4 py-1 sm:px-6 sm:py-2 text-black group cursor-pointer whitespace-nowrap ${
                 selectedCategory === category
                   ? "border-b-2 border-black font-bold"
                   : ""
@@ -119,7 +119,7 @@ const GalleryCategory = () => {
                   <Image
                     src={category.image}
                     alt={`${category.category} example`}
-                    className="w-full h-64 object-cover cursor-pointer"
+                    className="w-full h-36 md:h-64 object-cover cursor-pointer"
                     loading="lazy"
                     width={span === 3 ? 400 : 250}
                     height={256}
@@ -133,15 +133,27 @@ const GalleryCategory = () => {
         </div>
 
         {/* Button */}
-        <button
-          className="bg-[#1D1D1D] hover:bg-[#333333] text-white text-sm px-4 py-3 border border-gray-500 rounded-none flex items-center gap-2 cursor-pointer"
-          aria-label="Explore more categories"
+
+        <Button
+          sx={{
+            backgroundColor: "#1D1D1D",
+            width: "auto",
+           height: { xs: "40px", md: "48px" },
+            borderRadius: "0px",
+            border: "1px solid gray",
+            "&:hover": {
+              backgroundColor: "#333333",
+            },
+          }}
+          variant="contained"
         >
-          Explore More <GoArrowUpRight />
-        </button>
+          <p className="flex gap-2 items-center text-xs md:text-sm md:px-4 px-2">
+            Explore More <GoArrowUpRight />
+          </p>
+        </Button>
       </div>
 
-      <InstagramGallery />
+    
     </>
   );
 };

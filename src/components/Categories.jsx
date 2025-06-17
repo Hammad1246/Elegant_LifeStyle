@@ -34,16 +34,16 @@ const categories = [
 
 function Categories() {
   return (
-    <section className="h-screen bg-white px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col ">
+    <section className="md:h-screen h-auto bg-white px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col ">
       {/* Header */}
-      <div className="flex justify-between items-center py-6 px-5">
-        <h1 className="text-black text-4xl ">Top Categories</h1>
+      <div className="flex justify-between items-center md:py-6 pb-3 md:pb-0 px-5">
+        <h1 className="text-black md:text-4xl text-2xl ">Top Categories</h1>
         <Link href={"/gallery"}>
           <Button
             sx={{
               backgroundColor: "#1D1D1D",
               width: "auto",
-              height: "45px",
+              height: { xs: "40px", md: "45px" },
               borderRadius: "0px",
               border: "1px solid gray",
               "&:hover": {
@@ -52,7 +52,7 @@ function Categories() {
             }}
             variant="contained"
           >
-            <p className="flex gap-2 items-center text-sm px-1">
+            <p className="flex whitespace-nowrap gap-2 items-center md:text-sm text-xs px-1 ">
               Explore Gallery <GoArrowUpRight />
             </p>
           </Button>
@@ -60,14 +60,14 @@ function Categories() {
       </div>
 
       {/* Content */}
-      <div className="w-full h-[85%] flex">
+      <div className="w-full h-[85%] flex flex-col md:flex-row ">
         {/* Left Section (Sofas) */}
-        <div className="w-[50%] h-full p-4">
+        <div className="md:w-[50%] w-[100%] h-auto p-4">
           <CategoryCard {...categories[0]} />
         </div>
 
         {/* Right Section */}
-        <div className="w-[50%] h-full flex flex-col gap-4 p-4">
+        <div className="md:w-[50%] w-[100%] h-auto flex flex-col gap-4 p-4">
           {/* Coffee Tables */}
           <div className="w-full h-[50%]">
             <CategoryCard {...categories[1]} />
@@ -76,12 +76,12 @@ function Categories() {
           {/* Beds and Dining Tables */}
           <div className="w-full h-[50%] flex gap-4">
             {/* Beds */}
-            <div className="w-[50%] h-full">
+            <div className="w-[50%] h-auto">
               <CategoryCard {...categories[2]} />
             </div>
 
             {/* Dining Tables */}
-            <div className="w-[50%] h-full">
+            <div className="w-[50%] h-auto">
               <CategoryCard {...categories[3]} />
             </div>
           </div>
@@ -92,7 +92,7 @@ function Categories() {
 }
 
 const CategoryCard = ({ image, title, count }) => (
-  <div className="w-full h-full relative">
+  <div className="w-full md:h-full h-44 relative">
     <Image
       src={image}
       alt={title || "Default Alt Text"} 
@@ -101,10 +101,10 @@ const CategoryCard = ({ image, title, count }) => (
       width={800} 
       height={600}
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-lg flex flex-col justify-end py-8 pl-8 ">
-      <h2 className="text-white text-xl sm:text-2xl !font-semibold">{title}</h2>
-      <p className="text-gray-300 text-sm">{count}</p>
-      <div className="absolute bottom-10 right-10 text-white text-3xl">
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-lg flex flex-col justify-end md:py-8 py-4 md:pl-8 pl-4">
+      <h2 className="text-white text-lg md:text-2xl !font-semibold">{title}</h2>
+      <p className="text-gray-300 md:text-sm text-xs">{count}</p>
+      <div className="absolute md:bottom-10 bottom-5 md:right-10 right-5  text-white md:text-3xl text-lg">
         <MdArrowOutward />
       </div>
     </div>

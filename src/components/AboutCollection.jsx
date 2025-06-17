@@ -44,21 +44,21 @@ function AboutCollection() {
   ];
 
   return (
-    <section className="w-full bg-white mb-16">
+    <section className="w-full bg-white md:mb-12 mb-5 ">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-semibold text-black uppercase">Our Signature Sofa Collection</h2>
-        <p className="text-gray-500">
+        <h2 className="md:text-4xl text-2xl font-semibold text-black uppercase">Our Signature Sofa Collection</h2>
+        <p className="text-gray-500 md:text-base text-xs">
           From sleek modern designs to timeless classics each piece in our collection reflects our passion for quality, comfort, and craftsmanship.
         </p>
       </div>
 
-      <div className="w-full pl-16 ">
+      <div className="w-full md:pl-16 pl-6">
        <Swiper
           modules={[Mousewheel]}
           mousewheel={{
             forceToAxis: true,
           }}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1.2}
           navigation={{ prevEl: ".custom-prev", nextEl: ".custom-next" }}
           className="relative"
@@ -72,24 +72,24 @@ function AboutCollection() {
                     alt={product.title}
                     width={800}
                     height={500}
-                    className="w-full h-[500px] object-cover"
+                    className="w-full md:h-[430px] h-[200px] object-cover"
                   />
                 </div>
                 <div className="py-6">
-                  <h3 className="text-xl font-semibold mb-2 text-black">
+                  <h3 className="md:text-xl text-lg  font-semibold mb-2 text-black">
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-xs md:text-sm mb-4">
                     {product.description}
                   </p>
-                  <h5 className="text-black text-md mb-1">
+                  <h5 className="text-black text-sm md:text-base mb-1">
                     Price
                   </h5>
-                  <div className="flex gap-2  justify-start items-center text-black">
-                    <span className="flex justify-center items-center !font-bold text-xl ">
+                  <div className="flex gap-2  justify-start items-center text-black ">
+                    <span className="flex justify-center items-center !font-bold text-lg md:text-xl ">
                       <FaDollarSign className="" /> {product.price}
                     </span>
-                    <span>
+                    <span className="text-sm md:text-base">
                       {product.stock}
                     </span>
                   </div>

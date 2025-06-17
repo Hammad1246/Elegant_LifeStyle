@@ -34,10 +34,10 @@ function AboutUs() {
   );
 
   return (
-    <div className="h-screen px-10 flex justify-center items-center">
+    <div className="md:h-screen h-auto md:px-10 px-5 py-10 md:py-0 flex flex-col md:flex-row justify-center items-center">
       {/* Text Content */}
-      <div className="w-[50%] h-full flex flex-col justify-center items-left px-6 space-y-5">
-        <h1 className="text-black text-4xl">Where Style Meets Comfort</h1>
+      <div className="md:w-[50%] w-full h-full flex flex-col justify-center items-left md:px-6 space-y-5">
+        <h1 className="text-black md:text-4xl text-2xl text-center md:text-start">Where Style Meets Comfort</h1>
         <p className="text-sm text-[#868686]">
           Lorem ipsum dolor sit amet consectetur. Cras lorem ultrices morbn
           vitae. Diam amet lectus interdum libero ante sit tortor. Sollicitudin
@@ -66,8 +66,8 @@ function AboutUs() {
       </div>
 
       {/* Image Grid */}
-      <div className="w-[50%] h-full flex items-center justify-center p-4">
-        <div className="w-full h-full max-h-[80vh]">
+      <div className="md:w-[50%] w-full h-full flex items-center justify-center pt-5 md:pt-0 md:p-4">
+        <div className="md:w-full md:h-full md:max-h-[80vh] w-full h-80">
           <Box sx={GRID_STYLES} className="grid-rows-[auto_auto_auto]">
             {imageGrid.map((item, index) => (
               <Box

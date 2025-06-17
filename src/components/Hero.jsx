@@ -79,7 +79,7 @@ function Hero() {
       </div>
 
       {/* Slide Indicators */}
-     <div className="h-auto md:w-[10%] w-[30%] absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-between items-center">
+     <div className="h-auto md:w-[10%] w-[30%] absolute md:bottom-8 bottom-4 left-1/2 -translate-x-1/2 flex justify-between items-center">
         {SLIDES.map((slide, index) => (
           <button
             key={slide.id}

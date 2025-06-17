@@ -54,3 +54,18 @@ span{
 /* styles/globals.css */
 @import "swiper/css";
 @import "swiper/css/navigation";
+
+/* Hide scrollbar for Chrome, Edge, Safari */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Make sure scrolling still works */
+.no-scrollbar {
+  overflow: auto;
+}
