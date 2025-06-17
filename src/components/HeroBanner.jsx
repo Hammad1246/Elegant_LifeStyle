@@ -4,9 +4,9 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const SLIDES = [
   { id: 0, image: "/images/heroImage.jpg" },
-  { id: 1, image: "/images/heroImage2.jpg" },
-  { id: 2, image: "/images/heroImage3.jpg" },
-  { id: 3, image: "/images/heroImage4.jpg" },
+  { id: 1, image: "/images/c2.png" },
+  { id: 2, image: "/images/c3.png" },
+  { id: 3, image: "/images/c4.png" },
 ];
 
 function HeroBanner({ bannerName }) {
